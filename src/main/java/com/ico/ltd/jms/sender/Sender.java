@@ -1,7 +1,7 @@
 package com.ico.ltd.jms.sender;
 
 import com.ico.ltd.jms.config.JmsConfig;
-import com.ico.ltd.jms.model.Message;
+import com.ico.ltd.jms.model.HelloMessage;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -20,7 +20,7 @@ public class Sender {
 
         System.out.println("I'm sending a message");
 
-        Message message = Message.builder()
+        HelloMessage message = HelloMessage.builder()
                 .id(UUID.randomUUID())
                 .message("Hello World")
                 .build();
